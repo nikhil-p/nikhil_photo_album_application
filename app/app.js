@@ -5,7 +5,8 @@ angular.module('myApp', [
     'ngRoute',
     'myApp.addPhoto',
     'myApp.viewAllPhotos',
-    'myApp.version'
+    'myApp.version',
+    'angularFileUpload'
 ]).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/addNewPhoto'});
