@@ -10,4 +10,9 @@ angular.module('myApp', [
 ]).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/addNewPhoto'});
+    }])
+    .controller('AddPhotoCtrl', ['$scope', 'FileUploader', function ($scope, FileUploader) {
+        $scope.uploader = new FileUploader({
+            url: 'upload.php'
+        });
     }]);
